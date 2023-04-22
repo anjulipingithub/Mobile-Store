@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block main-content %}
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h1 class="display-4 mb-3">Your Order Has Been Placed!</h1>
+        <p class="lead mb-4">Thank you for your purchase. We will send you an email with your order details shortly.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block css %}
+  <style>
+    .display-4 {
+      font-size: 4rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .lead {
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: #777;
+    }
+  </style>
+{% endblock main-content %}

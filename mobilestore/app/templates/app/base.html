@@ -1,0 +1,110 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Mobile Store | {% block title %}{% endblock title %}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'app/css/owl.carousel.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'app/css/all.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}"/>
+
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark font-weight-bolder  ">
+      <a class="navbar-brand" href="#"><img src="{% static 'app/images/logo.jpg' %}" width="100" height="90"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link font-weight-bolder" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle font-weight-bolder" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" >
+             <li> <a class="dropdown-item" href="{% url 'category' 'AP' %}">Apple</a></li>
+             <li> <a class="dropdown-item" href="{% url 'category' 'SM' %}">Samsung</a></li>
+             <li> <a class="dropdown-item" href="{% url 'category' 'ON' %}">Oneplus</a></li>
+             <li> <a class="dropdown-item" href="{% url 'category' '0P' %}">Oppo</a></li>
+             <li> <a class="dropdown-item" href="{% url 'category' 'VV' %}">Vivo</a></li>
+             <li> <a class="dropdown-item" href="{% url 'category' 'HO' %}">Honor</a></li>
+             <li> <a class="dropdown-item" href="{% url 'category' 'MI' %}">Xiaomi</a></li>
+             <li> <a class="dropdown-item" href="{% url 'category' 'NO' %}">Nokia</a></li>
+              
+            </ul>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link text-white" href="">signup</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contact us</a>
+          </li>
+         
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span style="font-size:x-larger;"> Services</span>
+        </a>
+        <ul class="dropdown-menu" >
+         <li> <a class="dropdown-item" href="#">Profile</a></li>
+         <li> <a class="dropdown-item" href="#">Orders</a></li>
+         <li> <a class="dropdown-item" href="#">Logout</a></li>
+         </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span style="font-size:x-larger;"> Cart</span>
+        </a>
+        <ul class="dropdown-menu" >
+         <li> <a class="dropdown-item" href="{% url 'mycart' %}">My Cart</a></li>
+         <li> <a class="dropdown-item" href="#">Orders</a></li>
+         <li> <a class="dropdown-item" href="#">Logout</a></li>
+         </ul>
+      </li>
+   
+      <li class="nav-item mx-2">
+        <a href="#" class="nav-link text-white"><span style="font-size: larger;">Cart</span></a>
+      </li>
+      <li class="nav-item mx-2">
+        <a href="#" class="nav-link text-white"><span style="font-size: larger;">wishlist</span></a>
+      </li>
+
+    </nav>
+    {% block slideimage %}
+    
+    {% endblock slideimage %}
+
+    {% block main-content %}{% endblock main-content %}
+   
+    <!-- <footer class="container-fluid bg-dark font-weight-bolder text-light text-center " >
+      copyright:2023 || Develop by : Anju Sajan
+    
+
+    </footer> -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
